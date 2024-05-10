@@ -1,0 +1,12 @@
+<h1>All Events</h1>
+
+<% @events.each do |event| %>
+  <div>
+    <h2><%= link_to event.title, event %></h2>
+    <p><strong>Description:</strong> <%= event.description %></p>
+    <p><strong>Date:</strong> <%= event.date %></p>
+    <p><strong>Location:</strong> <%= event.location %></p>
+  </div>
+<% end %>
+
+<%= link_to 'New Event', new_event_path %>
