@@ -1,0 +1,7 @@
+<h1><%= @event.title %></h1>
+<p><strong>Description:</strong> <%= @event.description %></p>
+<p><strong>Date:</strong> <%= @event.date %></p>
+<p><strong>Location:</strong> <%= @event.location %></p>
+
+<%= link_to "Edit Event", edit_event_path(@event) %> |
+<%= link_to "Back to Events", users_path %>

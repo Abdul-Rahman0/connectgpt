@@ -61,9 +61,9 @@
       </div>
     </div>
   </div>
-  <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Events</a>
-  <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Post Events</a>
-  <a href="#" class="text-sm font-semibold leading-6 text-gray-900">Upcomming Events</a> <div> </div>
+  <%= link_to "My Events", users_path, class: "text-sm font-semibold leading-6 text-gray-900 hover:underline" %>
+  <a href="<%= new_event_path %>" class="text-sm font-semibold leading-6 text-gray-900">Post Events</a>
+  <a href="<%= events_path %>" class="text-sm font-semibold leading-6 text-gray-900">Upcoming Events</a>
 </div>
  <% end %>
     <% if current_user %>

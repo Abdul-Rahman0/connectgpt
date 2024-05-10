@@ -1,0 +1,14 @@
+<h1><%= @user.email %>'s Profile</h1>
+
+<div class="grid grid-cols-3 gap-4">
+  <% @events.each do |event| %>
+    <div class="bg-white rounded-lg shadow-md p-4">
+      <h2 class="text-xl font-semibold"><%= link_to event.title, user_path(event) %></h2>
+      <p class="text-gray-600"><%= event.description %></p>
+      <p><strong>Date:</strong> <%= event.date %></p>
+      <p><strong>Location:</strong> <%= event.location %></p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to 'Profile', user_path(current_user) %>
