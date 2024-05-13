@@ -42,6 +42,16 @@ class EventsController < ApplicationController
     redirect_to events_url, notice: 'Event was successfully destroyed.'
   end
 
+  def join
+    @event = Event.find(params[:id])
+    unless current_user.events.include?(@event)
+      current_user.events << @event
+      EventParticipation.create(user_id: current_user.id, event_id: @event.id)
+    end
+    redirect_to @event, notice: 'Successfully joined the event.'
+  end
+
+
   private
     def set_event
       @event = Event.find(params[:id])
