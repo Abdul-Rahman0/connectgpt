@@ -2,11 +2,11 @@ class UsersController < ApplicationController
   before_action :authenticate_user! # Ensure the user is authenticated before accessing this controller
   before_action :set_user
 
-  def index
+  def events
     @events = @user.events
   end
 
-  def show
+  def show_events
     @event = Event.find(params[:id])
   end
 
