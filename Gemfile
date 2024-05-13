@@ -74,7 +74,5 @@ end
 gem 'devise'
 gem "tailwindcss-rails", "~> 2.0"
 gem "activeadmin", "~> 3.2"
-gem "sass-rails", "~> 6.0"
 gem "activeadmin_addons", "~> 1.10"
 gem "arctic_admin", "~> 4.2"
-gem 'bootstrap'
