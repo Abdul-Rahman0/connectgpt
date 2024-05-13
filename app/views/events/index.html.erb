@@ -6,6 +6,7 @@
     <p><strong>Description:</strong> <%= event.description %></p>
     <p><strong>Date:</strong> <%= event.date %></p>
     <p><strong>Location:</strong> <%= event.location %></p>
+    <%= button_to 'Join Event', join_event_path(event), method: :post %>
   </div>
 <% end %>
 

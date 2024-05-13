@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user! # Ensure the user is authenticated before accessing this controller
+  before_action :authenticate_user!
   before_action :set_user
 
   def events
